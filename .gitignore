@@ -1,0 +1,22 @@
+# Compiled executables
+4th/4_4
+5th/sieve_book
+5th/sieve_odd
+5th/sieve_local
+5th/sieve_blocked
+
+# Python caches and local virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local logs and temporary files
+*.log
+*.tmp
