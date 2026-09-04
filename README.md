@@ -29,10 +29,11 @@
 |---|---|---|
 | [`4th/`](4th/) | 部分完成 | 第四章已有 `4_4.c` 案例和本地构建产物；文档化与现代化仍在进行 |
 | [`5th/`](5th/) | 已完成第一版 | 第五章 MPI 埃拉托斯特尼筛法：书本基线、奇数压缩、本地小素数、Cache 分块、测试、benchmark 和绘图 |
+| [`6th/`](6th/) | 已完成第一版 | 第六章 Floyd-Warshall：按行分解、MPI_Send/MPI_Recv、MPI_Bcast、正确性测试、benchmark 和绘图 |
 | `projects/matmul/` | 计划中 | 串行、OpenMP、MPI、MPI+OpenMP 矩阵乘法 |
 | `projects/summa/` | 计划中 | 二维进程网格、SUMMA 和非阻塞 SUMMA |
 
-当前已经可以完整学习和运行第五章；第四章目前只放入了部分内容，不能把整个仓库理解为已经完成全书重制。
+当前已经可以完整学习和运行第五章和第六章；第四章目前只放入了部分内容，不能把整个仓库理解为已经完成全书重制。
 
 ## 目录结构
 
@@ -54,10 +55,18 @@ mpi_omp_quinn/
 │   ├── base_primes.h                  # 小素数生成逻辑
 │   ├── scripts/                       # 性能实验和绘图脚本
 │   └── results/                       # CSV、Markdown 和 PNG 实验结果
+├── 6th/                              # 第六章：Floyd-Warshall，完整的第一版学习项目
+│   ├── README.md                      # 第六章学习说明、命令和实验方法
+│   ├── Makefile                       # 编译、正确性测试、benchmark、绘图
+│   ├── floyd_common.h                 # 矩阵、分块和验证公共逻辑
+│   ├── floyd_p2p.c                    # MPI_Send/MPI_Recv 点对点版本
+│   ├── floyd_bcast.c                  # MPI_Bcast 集合通信对照版本
+│   ├── scripts/                       # 性能实验和绘图脚本
+│   └── results/                       # CSV、Markdown 和 PNG 实验结果
 └── projects/                          # 后续矩阵乘和 SUMMA 项目
 ```
 
-`5th/` 中的可执行文件是本地编译生成的，不属于源代码。提交 GitHub 前应使用 `make clean`，并通过 `.gitignore` 忽略这类文件。
+`5th/` 和 `6th/` 中的可执行文件是本地编译生成的，不属于源代码。提交 GitHub 前应使用对应目录的 `make clean`，并通过 `.gitignore` 忽略这类文件。
 
 ## 学习方法
 

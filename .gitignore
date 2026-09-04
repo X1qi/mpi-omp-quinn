@@ -4,6 +4,9 @@
 5th/sieve_odd
 5th/sieve_local
 5th/sieve_blocked
+6th/floyd_p2p
+6th/floyd_bcast
+6th/final_*.txt
 
 # Python caches and local virtual environments
 __pycache__/
